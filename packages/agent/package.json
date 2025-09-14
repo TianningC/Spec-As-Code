@@ -1,0 +1,16 @@
+{
+  "name": "@spec-as-code/agent",
+  "version": "1.0.0",
+  "description": "AI Agent module for spec-as-code automation",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "build": "echo 'Agent build complete'",
+    "test": "node test/agent.test.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "keywords": ["agent", "ai", "automation", "spec-generation"],
+  "license": "MIT"
+}

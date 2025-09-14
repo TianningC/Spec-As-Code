@@ -1,0 +1,17 @@
+{
+  "name": "@spec-as-code/marketing-site",
+  "version": "1.0.0",
+  "description": "Product marketing site for spec-as-code platform",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src/server.js",
+    "build": "echo 'Marketing site build complete'",
+    "test": "node test/marketing.test.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-static": "^1.2.6"
+  },
+  "keywords": ["marketing", "website", "product", "landing-page"],
+  "license": "MIT"
+}
