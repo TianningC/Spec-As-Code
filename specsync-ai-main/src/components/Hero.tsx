@@ -4,7 +4,7 @@ import heroIllustration from "@/assets/spec-code-connection.png";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-primary/5 pt-16">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -46,7 +46,7 @@ export const Hero = () => {
             
             {/* Main Headline */}
             <h1 className="text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-              <span className="text-foreground">Specs and Code,</span>
+              <span className="text-foreground">Spec and Code,</span>
               <br />
               <span className="bg-gradient-to-r from-primary via-blue-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
                 Forever in Sync
@@ -55,7 +55,7 @@ export const Hero = () => {
             
             {/* Subtitle */}
             <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
-              The only <span className="font-semibold text-foreground">AI-native</span> solution that keeps your specifications perfectly aligned with code changes. No more documentation debt.
+              The <span className="font-semibold text-foreground">AI-native</span> solution that keeps your product specifications perfectly aligned with code changes. No more documentation debt.
             </p>
             
             {/* Stats */}
@@ -69,7 +69,7 @@ export const Hero = () => {
                 <div className="text-muted-foreground">Time Saved</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">Zero</div>
+                <div className="text-2xl font-bold text-primary">Minimal</div>
                 <div className="text-muted-foreground">Manual Updates</div>
               </div>
             </div>
@@ -128,13 +128,24 @@ export const Hero = () => {
         
         {/* Trust indicators */}
         <div className="mt-20 text-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-          <p className="text-sm text-muted-foreground mb-6">Trusted by development teams at</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <div className="text-2xl font-bold">Microsoft</div>
-            <div className="text-2xl font-bold">GitHub</div>
-            <div className="text-2xl font-bold">Azure</div>
-            <div className="text-2xl font-bold">DevOps</div>
+          <p className="text-sm text-muted-foreground mb-6">🎉 Trusted by forward-thinking development teams</p>
+          <div className="flex flex-wrap justify-center items-center gap-8">
+            <div className="bg-primary/10 px-6 py-3 rounded-full border border-primary/20">
+              <p className="text-lg font-bold bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
+          👨‍💻 Product Managers
+              </p>
+              <p className="text-xs text-muted-foreground">Spec Owners</p>
+            </div>
+            <div className="bg-primary/10 px-6 py-3 rounded-full border border-primary/20">
+              <p className="text-lg font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+          👩‍💼 Engineers
+              </p>
+              <p className="text-xs text-muted-foreground">Code Builders</p>
+            </div>
           </div>
+          <p className="text-xs text-muted-foreground mt-4 italic">
+            * Built with ✨ magic and creativity 🪄 during CY25H2 Hackathon
+          </p>
         </div>
       </div>
       

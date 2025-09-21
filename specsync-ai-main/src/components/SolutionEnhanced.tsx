@@ -1,5 +1,4 @@
-import { CheckCircle, GitPullRequest, Link, Sparkles, Zap, Shield, Rocket } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { CheckCircle, GitPullRequest, Link, Sparkles, Zap } from "lucide-react";
 
 export const SolutionEnhanced = () => {
   const solutions = [
@@ -14,7 +13,7 @@ export const SolutionEnhanced = () => {
       icon: Sparkles,
       title: "AI-powered automatic updates",
       description: "Intelligent agents detect PR commits and propose spec updates, keeping everything in sync.",
-      benefit: "Zero manual overhead",
+      benefit: "Low manual overhead",
       color: "from-purple-500 to-pink-500"
     },
     {
@@ -58,19 +57,19 @@ export const SolutionEnhanced = () => {
             kept in sync with evolving codebases using <span className="font-semibold text-primary">advanced AI</span>.
           </p>
 
-          {/* Key Stats */}
+          {/* Key Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
             <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50">
-              <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Sync Accuracy</div>
+              <div className="text-2xl font-bold text-primary mb-2">Always</div>
+              <div className="text-sm text-muted-foreground">In Sync</div>
             </div>
             <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50">
-              <div className="text-4xl font-bold text-green-600 mb-2">80%</div>
-              <div className="text-sm text-muted-foreground">Less Doc Debt</div>
+              <div className="text-2xl font-bold text-green-600 mb-2">Zero</div>
+              <div className="text-sm text-muted-foreground">Manual Updates</div>
             </div>
             <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50">
-              <div className="text-4xl font-bold text-blue-600 mb-2">5min</div>
-              <div className="text-sm text-muted-foreground">Setup Time</div>
+              <div className="text-2xl font-bold text-blue-600 mb-2">Instant</div>
+              <div className="text-sm text-muted-foreground">Setup</div>
             </div>
           </div>
         </div>
@@ -109,46 +108,6 @@ export const SolutionEnhanced = () => {
               <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-primary/20 transition-colors duration-500"></div>
             </div>
           ))}
-        </div>
-        
-        {/* Call to Action Section */}
-        <div className="relative bg-gradient-to-r from-primary/10 via-blue-500/10 to-purple-500/10 rounded-3xl p-12 text-center border border-primary/20 backdrop-blur-sm">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-blue-500/5 rounded-3xl"></div>
-          
-          <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 bg-primary/20 rounded-full px-6 py-3 text-sm font-medium text-primary mb-6">
-              <Rocket size={16} />
-              Ready to Transform Your Workflow?
-            </div>
-            
-            <h3 className="text-3xl lg:text-4xl font-bold mb-6">
-              Join the <span className="gradient-text">Spec-as-Code</span> Revolution
-            </h3>
-            
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Stop wasting time on documentation debt. Start building with confidence, 
-              knowing your specs and code tell the same story.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="hero" 
-                size="lg"
-                className="text-lg px-8 py-4 group"
-              >
-                Start Free Trial
-                <Sparkles size={20} className="ml-2 group-hover:scale-110 transition-transform" />
-              </Button>
-              <Button 
-                variant="hero-outline" 
-                size="lg"
-                className="text-lg px-8 py-4 group"
-              >
-                <Shield size={20} className="mr-2 group-hover:scale-110 transition-transform" />
-                Enterprise Demo
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
     </section>

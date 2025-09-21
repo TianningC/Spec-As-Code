@@ -8,19 +8,31 @@ import { AIAgent } from "@/components/AIAgent";
 import { ComingSoon } from "@/components/ComingSoon";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
+import { Navigation } from "@/components/Navigation";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
       <Hero />
-      <Problem_Enhanced />
-      <SolutionEnhanced />
-      <HowItWorks />
+      <section id="problem">
+        <Problem_Enhanced />
+      </section>
+      <section id="solution">
+        <SolutionEnhanced />
+      </section>
+      <section id="how-it-works">
+        <HowItWorks />
+      </section>
       <DemoVideo />
-      <Benefits />
+      <section id="benefits">
+        <Benefits />
+      </section>
       <AIAgent />
       <ComingSoon />
-      <CTA />
+      <section id="cta">
+        <CTA />
+      </section>
       <Footer />
     </div>
   );

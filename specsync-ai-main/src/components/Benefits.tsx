@@ -58,14 +58,6 @@ export const Benefits = () => {
             </div>
           ))}
         </div>
-        
-        <div className="mt-16 text-center bg-muted/50 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold mb-4">The Bottom Line</h3>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Stop wasting time on documentation debt. Start building with confidence, 
-            knowing your specs and code tell the same story.
-          </p>
-        </div>
       </div>
     </section>
   );

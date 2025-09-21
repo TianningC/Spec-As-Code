@@ -10,14 +10,14 @@ export const CTA = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-            Ready to Sync Your{" "}
+            Start Building{" "}
             <span className="gradient-hero bg-clip-text text-transparent">
-              Specs and Code?
+              Synchronized
             </span>
           </h2>
           
           <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Join the movement of PMs and engineers who've eliminated documentation debt forever.
+            No more outdated docs. No more misaligned teams. Just seamless development.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

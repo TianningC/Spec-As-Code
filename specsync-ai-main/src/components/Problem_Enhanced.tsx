@@ -5,23 +5,20 @@ export const Problem_Enhanced = () => {
     {
       icon: Search,
       title: "Specs are outdated and hard to find",
-      description: "Critical documentation gets scattered across folders, becoming stale and unreliable.",
-      stat: "73%",
-      statLabel: "of devs struggle to find current specs"
+      description: "Docs live in scattered files, emails, and chat threads. Nobody is sure which version is current.",
+      impact: "Result: Engineers guess or re‑implement work."
     },
     {
       icon: AlertTriangle,
       title: "Code drifts from design docs",
-      description: "Implementations evolve but specs don't keep up, creating dangerous misalignment.",
-      stat: "2.5x",
-      statLabel: "more bugs when specs are outdated"
+      description: "Features evolve in code but specs are left behind. Decisions disappear and reviewers lose context.",
+      impact: "Result: Misaligned reviews and avoidable defects."
     },
     {
       icon: MessageSquareX,
-      title: "Knowledge lives in people's heads",
-      description: "Critical context stays in experts' heads and codebase, not in shared docs.",
-      stat: "40%",
-      statLabel: "of onboarding time spent hunting context"
+      title: "Knowledge stays in a few heads",
+      description: "Context lives with senior contributors instead of in living docs. New teammates repeat questions.",
+      impact: "Result: Slow onboarding and duplicated effort."
     }
   ];
 
@@ -74,15 +71,10 @@ export const Problem_Enhanced = () => {
                 <problem.icon className="w-10 h-10 text-red-600 dark:text-red-400" />
               </div>
               
-              {/* Stats */}
-              <div className="mb-4">
-                <div className="text-3xl font-bold text-red-600 dark:text-red-400 mb-1">{problem.stat}</div>
-                <div className="text-xs text-muted-foreground uppercase tracking-wider">{problem.statLabel}</div>
-              </div>
-              
               {/* Content */}
-              <h3 className="text-xl font-semibold mb-4 leading-tight">{problem.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{problem.description}</p>
+              <h3 className="text-xl font-semibold mb-3 leading-tight">{problem.title}</h3>
+              <p className="text-muted-foreground leading-relaxed mb-3">{problem.description}</p>
+              <p className="text-xs font-medium text-red-600 dark:text-red-400 tracking-wide">{problem.impact}</p>
             </div>
           ))}
         </div>
