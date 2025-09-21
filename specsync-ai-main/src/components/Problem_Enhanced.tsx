@@ -87,7 +87,7 @@ export const Problem_Enhanced = () => {
           </div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Teams waste <span className="font-bold text-red-600 dark:text-red-400">countless hours</span> hunting 
-            for context, building the wrong features, and fixing preventable bugs. 
+            for context, building short-lived features, and fixing preventable errors. 
             <br className="hidden sm:block" />
             <span className="font-semibold text-foreground">There has to be a better way.</span>
           </p>

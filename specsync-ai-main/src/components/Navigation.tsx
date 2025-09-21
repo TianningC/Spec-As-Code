@@ -5,12 +5,30 @@ import { Menu, X, Zap } from "lucide-react";
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Determine active section based on scroll position
+      const sections = ["overview", "problem", "solution", "how-it-works", "benefits", "coming-soon", "cta"];
+      
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Consider a section active if it's in the viewport (with some offset for header)
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
     };
+    
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -23,10 +41,12 @@ export const Navigation = () => {
   };
 
   const navItems = [
+    { label: "Overview", id: "overview" },
     { label: "Problem", id: "problem" },
     { label: "Solution", id: "solution" },
     { label: "How It Works", id: "how-it-works" },
     { label: "Benefits", id: "benefits" },
+    { label: "Coming Soon", id: "coming-soon" },
   ];
 
   return (
@@ -40,7 +60,7 @@ export const Navigation = () => {
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-blue-500 rounded-lg flex items-center justify-center">
               <Zap size={16} className="text-white" />
             </div>
-            <span className="font-bold text-lg">SpecSync AI</span>
+            <span className="font-bold text-lg">Spec-as-Code</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -49,15 +69,23 @@ export const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className={`transition-colors relative ${
+                  activeSection === item.id 
+                    ? 'text-primary font-medium' 
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
                 {item.label}
+                {activeSection === item.id && (
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"></div>
+                )}
               </button>
             ))}
             <Button
               variant="hero"
               size="sm"
               onClick={() => scrollToSection("cta")}
+              className={activeSection === "cta" ? "ring-2 ring-primary/30" : ""}
             >
               Get Started
             </Button>
@@ -80,7 +108,11 @@ export const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-left text-muted-foreground hover:text-foreground transition-colors py-2"
+                  className={`text-left py-2 transition-colors ${
+                    activeSection === item.id 
+                      ? 'text-primary font-medium' 
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
                 >
                   {item.label}
                 </button>

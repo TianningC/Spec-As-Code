@@ -1,4 +1,4 @@
-# SpecSync AI - Spec-As-Code
+# Spec-as-Code
 
 > **Keep your specs and code perfectly aligned with AI-powered automation**
 
@@ -8,7 +8,7 @@
 
 ## 🚀 Overview
 
-SpecSync AI is an innovative solution that bridges the gap between specifications and code implementation. Our AI agent automatically analyzes pull requests, compares them against project specifications, and creates suggested updates to keep documentation perfectly synchronized with your codebase.
+Spec-as-Code is an innovative solution that bridges the gap between specifications and code implementation. Our AI agent automatically analyzes pull requests, compares them against project specifications, and creates suggested updates to keep documentation perfectly synchronized with your codebase.
 
 ### ✨ Key Features
 

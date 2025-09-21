@@ -95,15 +95,15 @@ export const HowItWorks = () => {
           </p>
         </div>
         
-        <div ref={containerRef} className="max-w-5xl mx-auto space-y-24">
+        <div ref={containerRef} className="max-w-7xl mx-auto space-y-32">
           {steps.map((step, index) => {
             const isEven = index % 2 === 1;
             return (
               <div
                 key={index}
                 data-step-index={index}
-                className={`flex flex-col-reverse items-center gap-10 md:gap-16 md:grid md:grid-cols-2 ${
-                  isEven ? "md:[&>div:first-child]:order-2" : ""
+                className={`flex flex-col-reverse items-center gap-16 md:gap-24 lg:grid lg:grid-cols-5 ${
+                  isEven ? "lg:[&>div:first-child]:order-2" : ""
                 } transition-all duration-700 will-change-transform will-change-opacity ${
                   visible[index]
                     ? "opacity-100 translate-y-0"
@@ -111,7 +111,7 @@ export const HowItWorks = () => {
                 }`}
               >
                 {/* Text Block */}
-                <div className="w-full">
+                <div className="w-full lg:col-span-2">
                   <div className="inline-flex items-center gap-3 mb-4">
                     <span className="text-sm font-mono font-bold tracking-wider text-primary bg-primary/10 px-3 py-1 rounded">
                       {step.number}
@@ -120,19 +120,19 @@ export const HowItWorks = () => {
                       <step.icon className="w-5 h-5 text-primary-foreground" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-semibold mb-3">{step.title}</h3>
-                  <p className="text-base text-muted-foreground leading-relaxed max-w-prose">
+                  <h3 className="text-2xl lg:text-3xl font-semibold mb-4">{step.title}</h3>
+                  <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-prose">
                     {step.description}
                   </p>
                 </div>
 
                 {/* Image / Screenshot Placeholder */}
-                <div className="w-full group">
+                <div className="w-full group lg:col-span-3">
                   {step.image ? (
                     <button
                       type="button"
                       onClick={() => setOpenImage({ src: step.image as string, alt: step.imageAlt })}
-                      className="group relative aspect-video w-full rounded-xl overflow-hidden border border-border/60 shadow-sm ring-1 ring-black/5 bg-black/5 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                      className="group relative aspect-video w-full rounded-xl overflow-hidden border border-border/60 shadow-lg ring-1 ring-black/5 bg-black/5 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all hover:shadow-xl"
                     >
                       <img
                         src={step.image as string}
@@ -141,18 +141,18 @@ export const HowItWorks = () => {
                         loading="lazy"
                       />
                       <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 bg-gradient-to-tr from-primary/20 via-transparent to-transparent transition-opacity" />
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent p-3 text-xs font-medium tracking-wide flex justify-between items-center">
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent p-4 text-sm font-medium tracking-wide flex justify-between items-center">
                         <span>{step.imageAlt}</span>
-                        <span className="text-primary text-[10px] tracking-widest font-semibold uppercase">Click to enlarge</span>
+                        <span className="text-primary text-xs tracking-widest font-semibold uppercase bg-primary/10 px-2 py-1 rounded-full">Click to enlarge</span>
                       </div>
                     </button>
                   ) : (
-                    <div className="relative aspect-video rounded-xl border border-border/60 bg-gradient-to-br from-muted/60 to-muted/20 overflow-hidden shadow-sm group-hover:shadow-md transition-shadow">
-                      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-muted-foreground">
-                        <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center">
-                          <ImageIcon className="w-7 h-7 text-primary" />
+                    <div className="relative aspect-video rounded-xl border border-border/60 bg-gradient-to-br from-muted/60 to-muted/20 overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                      <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-muted-foreground">
+                        <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <ImageIcon className="w-8 h-8 text-primary" />
                         </div>
-                        <span className="text-xs uppercase tracking-wider font-medium opacity-80">
+                        <span className="text-sm uppercase tracking-wider font-medium opacity-80 text-center px-4">
                           {step.imageAlt}
                         </span>
                       </div>
@@ -176,31 +176,31 @@ export const HowItWorks = () => {
           <div
             role="dialog"
             aria-modal="true"
-            className="fixed inset-0 z-50 flex items-center justify-center p-6 backdrop-blur-sm bg-background/70 animate-in fade-in"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 backdrop-blur-sm bg-background/80 animate-in fade-in"
             onClick={() => setOpenImage(null)}
           >
             <div
-              className="relative max-w-5xl w-full"
+              className="relative max-w-7xl w-full max-h-full"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setOpenImage(null)}
-                className="absolute -top-10 right-0 text-muted-foreground hover:text-foreground transition"
+                className="absolute -top-12 right-0 text-muted-foreground hover:text-foreground transition-colors bg-background/80 p-2 rounded-full"
                 aria-label="Close"
               >
                 <X className="w-6 h-6" />
               </button>
-              <div className="rounded-xl overflow-hidden border border-border/60 shadow-xl bg-background">
+              <div className="rounded-xl overflow-hidden border border-border/60 shadow-2xl bg-background max-h-[90vh] flex flex-col">
                 <img
                   src={openImage.src}
                   alt={openImage.alt}
-                  className="w-full h-full object-contain"
+                  className="w-full h-auto object-contain max-h-[80vh]"
                 />
-                <div className="p-4 text-sm text-muted-foreground border-t border-border/60 flex items-center justify-between">
-                  <span>{openImage.alt}</span>
+                <div className="p-4 text-sm text-muted-foreground border-t border-border/60 flex items-center justify-between bg-muted/30">
+                  <span className="font-medium">{openImage.alt}</span>
                   <button
                     onClick={() => setOpenImage(null)}
-                    className="px-3 py-1 text-xs font-medium rounded-md bg-primary/10 text-primary hover:bg-primary/20 transition"
+                    className="px-4 py-2 text-xs font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                   >Close</button>
                 </div>
               </div>

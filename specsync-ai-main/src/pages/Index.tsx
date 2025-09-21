@@ -14,7 +14,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <Hero />
+      <section id="overview">
+        <Hero />
+      </section>
       <section id="problem">
         <Problem_Enhanced />
       </section>
@@ -29,7 +31,9 @@ const Index = () => {
         <Benefits />
       </section>
       <AIAgent />
-      <ComingSoon />
+      <section id="coming-soon">
+        <ComingSoon />
+      </section>
       <section id="cta">
         <CTA />
       </section>

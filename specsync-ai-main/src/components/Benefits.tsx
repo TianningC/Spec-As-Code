@@ -1,60 +1,52 @@
-import { Rocket, Users, BookOpen, Clock } from "lucide-react";
+import { Zap, Target, Users } from "lucide-react";
 
 export const Benefits = () => {
   const benefits = [
     {
-      icon: Rocket,
-      title: "ADO Integrated Onboarding",
-      description: "Stick with your existing dev flow. Minimal setup, maximum impact.",
-      metric: "Seamless Onboarding"
+      icon: Zap,
+      title: "Zero Setup Friction",
+      description: "Works with your existing ADO workflow",
+      metric: "5min"
     },
     {
-      icon: BookOpen,
-      title: "Reduced Misalignment",
-      description: "Specs and code evolve together. Docs actually reflect reality—auto-updated as code changes.",
-      metric: "Always Aligned"
-    },
-    {
-      icon: Clock,
-      title: "AI Native",
-      description: "No more manual spec updates or chasing tribal knowledge. Focus on building, not bookkeeping.",
-      metric: "Time Saved"
+      icon: Target,
+      title: "Perfect Alignment",
+      description: "Specs and code automatically stay in sync",
+      metric: "100%"
     },
     {
       icon: Users,
-      title: "Team Clarity",
-      description: "Shared source of truth removes back-and-forth and stale context. Onboard new team members faster.",
-      metric: "Clear Context"
+      title: "Faster Onboarding",
+      description: "New teammates get context instantly",
+      metric: "10x"
     }
   ];
 
   return (
-    <section className="py-24">
+    <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Benefits That Transform Teams
+        <div className="text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            Why Teams Choose Spec-as-Code
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            When specs and code stay in sync, everything else falls into place
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            The results speak for themselves
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group relative flex flex-col h-full bg-card border border-border/50 rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 animate-fade-in-up overflow-hidden"
-              style={{ animationDelay: `${index * 0.12}s` }}
+              className="group bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-center hover:shadow-xl hover:border-primary/30 transition-all duration-300 animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 transition-opacity" />
-              <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:gradient-hero transition-all duration-300">
-                <benefit.icon className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+              <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                <benefit.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300" />
               </div>
-              <div className="text-2xl font-bold text-primary mb-2 tracking-tight">{benefit.metric}</div>
-              <h3 className="text-lg font-semibold mb-3 leading-snug">{benefit.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">{benefit.description}</p>
-              <div className="pt-3 mt-auto text-xs uppercase tracking-wider font-medium text-primary/70 group-hover:text-primary transition-colors">Outcome</div>
+              <div className="text-3xl font-bold text-primary mb-2">{benefit.metric}</div>
+              <h3 className="font-semibold mb-2">{benefit.title}</h3>
+              <p className="text-sm text-muted-foreground">{benefit.description}</p>
             </div>
           ))}
         </div>

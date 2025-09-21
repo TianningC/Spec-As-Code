@@ -128,23 +128,23 @@ export const Hero = () => {
         
         {/* Trust indicators */}
         <div className="mt-20 text-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-          <p className="text-sm text-muted-foreground mb-6">🎉 Trusted by forward-thinking development teams</p>
+          <p className="text-sm text-muted-foreground mb-6">🎉 Trusted by forward-thinking TDF team</p>
           <div className="flex flex-wrap justify-center items-center gap-8">
             <div className="bg-primary/10 px-6 py-3 rounded-full border border-primary/20">
               <p className="text-lg font-bold bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
-          👨‍💻 Product Managers
+          👨‍💻 Tianning
               </p>
-              <p className="text-xs text-muted-foreground">Spec Owners</p>
+              <p className="text-xs text-muted-foreground">Spec Master</p>
             </div>
             <div className="bg-primary/10 px-6 py-3 rounded-full border border-primary/20">
               <p className="text-lg font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-          👩‍💼 Engineers
+          👩‍💼 Yuanzhi
               </p>
-              <p className="text-xs text-muted-foreground">Code Builders</p>
+              <p className="text-xs text-muted-foreground">Code Wizard</p>
             </div>
           </div>
           <p className="text-xs text-muted-foreground mt-4 italic">
-            * Built with ✨ magic and creativity 🪄 during CY25H2 Hackathon
+            * Built with ✨creativity🪄 during CY25H2 Hackathon
           </p>
         </div>
       </div>
