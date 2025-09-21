@@ -1,0 +1,39 @@
+Title: Introducing Spec-as-Code (2.5 min demo)
+Total Target Length: ~370 words (≈2.5 minutes at 145–155 wpm)
+
+SECTION 1 – Overview (Hero)
+Today we’re introducing a simple idea with big leverage: product specs and code should never drift. Spec-as-Code keeps them forever in sync—powered by AI agent that understands both intent and implementation.
+
+SECTION 2 – Problem
+In big, long-lived systems—like Substrate—design intent often starts in PM docs. But over time, the real truth lives in the code. Specs fall behind.
+New PMs and engineers waste days trying to piece things together. Reviews drag. Risk and rework pile up.
+The gap between what we meant and what we shipped becomes a tax on every iteration.
+SECTION 3 – Solution (What we do)
+Our answer is simple: treat specs like code, and let AI agent keep spec and code in sync.
+Specs live in the repo, versioned, reviewed, and traceable.
+Every code change is scanned. Every spec change is validated. If something drifts, it gets flagged—or auto-updated.
+The spec stops being a stale doc. It becomes a living contract.
+SECTION 4 – How It Works (6 steps)
+Here’s the flow: First, PM create new feature in ADO as usual. After review, the spec is checked into the repo as markdown file, linked to the work item, and signed off. Then, Engineers ship the code and open a pull request. The system scans both code and spec. If drift shows up, a doc-update task is created and assigned to the SWE Agent. The agent proposes spec changes. The PM or dev reviews, approves, and merges. Done.
+SECTION 5 – Real Demo
+Let’s look at a recent change: the café single namespace implementation and the related TDF spec update. 
+The Café team needed to close a connectivity gap in TDF. Their solution was to implement single-namespace routing, so TDF requests could be routed from a worldwide endpoint.
+The PM spec for this feature was first written in Word, reviewed with the team, then converted into Markdown and checked into the repo. That way, the spec was versioned and linked to the engineering work item in ADO.
+Next, the engineers implemented the feature and committed their code under the same ADO work item. This commit triggered the Spec-as-Code system. The agent scanned both the repo and the new code. It noticed drift between the spec and the implementation, so it automatically created a doc-update work item.
+That work item was then assigned to the SWE Agent. The agent analyzed the change, inferred which requirements were impacted, and drafted spec updates to keep things aligned. It submitted a pull request containing those updates.
+In the pull request, we can clearly see what changed. The agent surfaced the exact section of the TDF spec that was affected—in this case, Gap 3—summarized the context, and proposed edits that highlighted the technical changes made in code.
+The reviewer read through the diff, confirmed the changes were accurate, and approved the pull request. With that approval, the spec and the code were realigned before merge. No lag, no manual chasing.
+
+SECTION 6 – Benefits
+Spec-as-Code is more than just tooling. It represents a shift to an AI-native process.
+Other approaches bolt AI on as an add-on. We treat it as an integral part of the product development workflow. Every code change triggers smart analysis. Every spec update is context-aware. The AI agent takes care of alignment work, while PMs and engineers focus on design, decisions, and impact.
+
+SECTION 7 – What’s Next (Paradigm Shift)
+Looking forward, our vision is to transform the entire product development and operations workflow. Specs and code will stay tightly connected, all the way through.
+Docs should read like a living Wikipedia—where every term or concept links back to a single source of truth. Sometimes that truth will be in an internal document; other times, in actual code logic. Either way, teams will always have grounded, reliable references.
+This is the paradigm shift: product development that runs on continuous sync between natural language and executable logic.
+
+SECTION 8 – Call to Action
+Getting started is simple. Check in a living spec. Enable the agent. Run it on your next pull request.
+Watch drift disappear—before it ever accumulates.
+Thank you.

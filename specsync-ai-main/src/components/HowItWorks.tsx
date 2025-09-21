@@ -3,9 +3,11 @@ import { useEffect, useRef, useState } from "react";
 // Import screenshot assets (add the file under src/assets)
 // If the actual filename differs, adjust accordingly.
 import workItemScreenshot from "@/assets/work-item.png"; // Add this image file
+import checkinSpecScreenshot from "@/assets/checkin-spec.png"; // Step 2 spec check-in
 import prScreenshot from "@/assets/pr.png"; // Step 3 PR / code commit
 import agentAnalysisScreenshot from "@/assets/agent-analysis.png"; // Step 4 agent analysis
 import specUpdateScreenshot from "@/assets/spec-update.png"; // Step 5 spec update
+import reviewSyncScreenshot from "@/assets/review-sync.png"; // Step 6 review and sync
 
 export const HowItWorks = () => {
   const [openImage, setOpenImage] = useState<null | { src: string; alt: string }>(null);
@@ -48,7 +50,8 @@ export const HowItWorks = () => {
       icon: GitBranch,
       title: "Check in Spec",
       description: "PM checks in the spec (Markdown) to the repo under the same ADO item",
-      imageAlt: "Spec checked into repo screenshot"
+      imageAlt: "Specification document checked into Azure DevOps repository",
+      image: checkinSpecScreenshot
     },
     {
       number: "03",
@@ -79,7 +82,8 @@ export const HowItWorks = () => {
       icon: CheckCircle,
       title: "Review & Sync",
       description: "PM reviews and approves the update, keeping code and spec perfectly aligned",
-      imageAlt: "Review and sync confirmation screenshot"
+      imageAlt: "Pull request review and approval workflow in Azure DevOps",
+      image: reviewSyncScreenshot
     }
   ];
 

@@ -1,4 +1,4 @@
-import { CheckCircle, GitPullRequest, Link, Sparkles, Zap, Target, Users } from "lucide-react";
+import { CheckCircle, GitPullRequest, Link, Sparkles, Zap } from "lucide-react";
 
 export const SolutionEnhanced = () => {
   const solutions = [
@@ -10,39 +10,18 @@ export const SolutionEnhanced = () => {
       color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: Sparkles,
-      title: "AI-powered automatic updates",
-      description: "Intelligent agents detect PR commits and propose spec updates, keeping everything in sync.",
-      benefit: "Low manual overhead",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
       icon: Link,
       title: "Requirement-level traceability",
       description: "Maintain precise links between specs and code to avoid hallucinations in complex systems.",
       benefit: "Complete visibility",
       color: "from-green-500 to-emerald-500"
-    }
-  ];
-
-  const outcomes = [
-    {
-      icon: Zap,
-      title: "Zero Setup Friction",
-      description: "Works with your existing ADO workflow",
-      metric: "5min"
     },
     {
-      icon: Target,
-      title: "Perfect Alignment",
-      description: "Specs and code automatically stay in sync",
-      metric: "100%"
-    },
-    {
-      icon: Users,
-      title: "Faster Onboarding",
-      description: "New teammates get context instantly",
-      metric: "10x"
+      icon: Sparkles,
+      title: "AI-powered automatic updates",
+      description: "Intelligent agents detect PR commits and propose spec updates, keeping everything in sync.",
+      benefit: "Low manual overhead",
+      color: "from-purple-500 to-pink-500"
     }
   ];
 
@@ -113,31 +92,6 @@ export const SolutionEnhanced = () => {
                 
                 {/* Hover Effect Border */}
                 <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-primary/20 transition-colors duration-500"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Results */}
-        <div className="bg-muted/30 rounded-3xl p-12">
-          <h3 className="text-3xl font-bold text-center mb-4">Why Teams Choose Spec-as-Code</h3>
-          <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            The results speak for themselves
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {outcomes.map((outcome, index) => (
-              <div
-                key={index}
-                className="group bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 text-center hover:shadow-xl hover:border-primary/30 transition-all duration-300 animate-fade-in-up"
-                style={{ animationDelay: `${(index + 3) * 0.1}s` }}
-              >
-                <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                  <outcome.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300" />
-                </div>
-                <div className="text-3xl font-bold text-primary mb-2">{outcome.metric}</div>
-                <h4 className="font-semibold mb-2">{outcome.title}</h4>
-                <p className="text-sm text-muted-foreground">{outcome.description}</p>
               </div>
             ))}
           </div>
