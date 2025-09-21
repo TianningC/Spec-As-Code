@@ -1,0 +1,17 @@
+{
+  "name": "@spec-as-code/pm-spec",
+  "version": "1.0.0",
+  "description": "Product Management Specification module for spec-as-code",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "build": "echo 'PM Spec build complete'",
+    "test": "node test/pm-spec.test.js"
+  },
+  "dependencies": {
+    "yaml": "^2.3.4",
+    "ajv": "^8.12.0"
+  },
+  "keywords": ["pm", "specification", "product-management"],
+  "license": "MIT"
+}
