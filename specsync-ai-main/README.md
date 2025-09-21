@@ -1,73 +1,110 @@
-# Welcome to your Lovable project
+# SpecSync AI - Spec-As-Code
 
-## Project info
+> **Keep your specs and code perfectly aligned with AI-powered automation**
 
-**URL**: https://lovable.dev/projects/1b8f0ae5-eff0-47c7-a2dd-09b532acedf2
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)](https://reactjs.org/)
 
-## How can I edit this code?
+## 🚀 Overview
 
-There are several ways of editing your application.
+SpecSync AI is an innovative solution that bridges the gap between specifications and code implementation. Our AI agent automatically analyzes pull requests, compares them against project specifications, and creates suggested updates to keep documentation perfectly synchronized with your codebase.
 
-**Use Lovable**
+### ✨ Key Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1b8f0ae5-eff0-47c7-a2dd-09b532acedf2) and start prompting.
+- **🔄 Automatic Sync**: AI-powered analysis keeps specs and code aligned
+- **📋 ADO Integration**: Seamlessly integrates with Azure DevOps workflows  
+- **🤖 AI Agent**: Intelligent analysis of code changes vs specifications
+- **📝 Smart Updates**: Automated spec update proposals via pull requests
+- **⚡ Zero Friction**: Works with your existing development process
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🎯 How It Works
 
-**Use your preferred IDE**
+1. **Create Work Item** - PM creates an ADO Work Item for new features
+2. **Check in Spec** - PM adds specification (Markdown) to the repository
+3. **Engineer Commits PR** - Developer implements feature and creates pull request
+4. **AI Agent Analysis** - Our AI scans the PR and compares against the spec
+5. **Propose Updates** - Agent creates draft PR with suggested spec changes
+6. **Review & Sync** - PM reviews and approves updates, keeping everything aligned
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Development Setup
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+- Node.js 18+ - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- npm or yarn package manager
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Local Development
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+# Clone the repository
+git clone https://github.com/TianningC/Spec-As-Code.git
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Navigate to project directory
+cd Spec-As-Code
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
+
+# Open http://localhost:8080 in your browser
 ```
 
-**Edit a file directly in GitHub**
+### Available Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+```
 
-**Use GitHub Codespaces**
+## 🏗️ Tech Stack
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This project is built with modern web technologies:
 
-## What technologies are used for this project?
+- **⚡ Vite** - Fast build tool and dev server
+- **🔷 TypeScript** - Type-safe JavaScript 
+- **⚛️ React** - UI library with hooks
+- **🎨 Tailwind CSS** - Utility-first CSS framework
+- **🧩 shadcn/ui** - Beautiful, accessible component library
+- **📱 Responsive Design** - Mobile-first approach
 
-This project is built with:
+## 🚀 Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Automated Deployment
+- Push to `main` branch for automatic deployment
+- View live site at: [Your deployment URL]
 
-## How can I deploy this project?
+### Manual Deployment
+```bash
+# Build the project
+npm run build
 
-Simply open [Lovable](https://lovable.dev/projects/1b8f0ae5-eff0-47c7-a2dd-09b532acedf2) and click on Share -> Publish.
+# Deploy the dist/ folder to your hosting platform
+```
 
-## Can I connect a custom domain to my Lovable project?
+## 🤝 Contributing
 
-Yes, you can!
+We welcome contributions! Please:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact & Support
+
+- **GitHub Issues**: [Report bugs or request features](https://github.com/TianningC/Spec-As-Code/issues)
+- **Project Owner**: [@TianningC](https://github.com/TianningC)
+
+---
+
+**Ready to eliminate documentation debt?** Start building with confidence knowing your specs and code tell the same story. 🎯
