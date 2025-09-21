@@ -1,6 +1,6 @@
 import { Hero } from "@/components/Hero";
-import { Problem } from "@/components/Problem";
-import { Solution } from "@/components/Solution";
+import { Problem_Enhanced } from "@/components/Problem_Enhanced";
+import { SolutionEnhanced } from "@/components/SolutionEnhanced";
 import { HowItWorks } from "@/components/HowItWorks";
 import { DemoVideo } from "@/components/DemoVideo";
 import { Benefits } from "@/components/Benefits";
@@ -13,8 +13,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Hero />
-      <Problem />
-      <Solution />
+      <Problem_Enhanced />
+      <SolutionEnhanced />
       <HowItWorks />
       <DemoVideo />
       <Benefits />

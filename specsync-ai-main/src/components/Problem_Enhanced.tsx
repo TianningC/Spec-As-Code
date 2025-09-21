@@ -1,6 +1,6 @@
 import { AlertTriangle, Search, MessageSquareX, TrendingDown, Clock, Users } from "lucide-react";
 
-export const Problem = () => {
+export const Problem_Enhanced = () => {
   const problems = [
     {
       icon: Search,
