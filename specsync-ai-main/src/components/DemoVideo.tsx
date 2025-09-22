@@ -1,4 +1,4 @@
-import { Play, Video } from "lucide-react";
+import { Play } from "lucide-react";
 
 export const DemoVideo = () => {
   return (
@@ -14,27 +14,30 @@ export const DemoVideo = () => {
         </div>
         
         <div className="relative">
-          {/* Video Placeholder */}
-          <div className="bg-muted/50 border-2 border-dashed border-border rounded-xl aspect-video flex flex-col items-center justify-center text-center p-8">
-            <div className="w-20 h-20 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Video className="w-10 h-10 text-primary" />
-            </div>
-            <h3 className="text-2xl font-semibold mb-4">Demo Video</h3>
-            <p className="text-muted-foreground mb-6 max-w-md">
-              Complete walkthrough showing how specs and code stay in perfect sync throughout the development lifecycle
+          <div className="relative w-full rounded-xl overflow-hidden shadow-lg ring-1 ring-border bg-black/70 aspect-video">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://microsoft-my.sharepoint-df.com/personal/chentianning_microsoft_com/_layouts/15/embed.aspx?UniqueId=5d3dbbd7-f7c2-476f-93f4-5fbd8f7dc131&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+              title="Hackathon Demo - Spec-as-Code"
+              allowFullScreen
+              frameBorder={0}
+              scrolling="no"
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              allow="clipboard-write; encrypted-media; fullscreen;"
+            />
+          </div>
+          <noscript>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Video embed requires JavaScript. View it directly: {" "}
+              <a
+                href="https://microsoft-my.sharepoint-df.com/personal/chentianning_microsoft_com/_layouts/15/embed.aspx?UniqueId=5d3dbbd7-f7c2-476f-93f4-5fbd8f7dc131"
+                className="underline"
+                rel="noopener noreferrer"
+                target="_blank"
+              >Open video</a>.
             </p>
-            <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-6 py-3 text-primary font-medium">
-              <Play className="w-4 h-4" />
-              Coming Soon
-            </div>
-          </div>
-          
-          {/* Play Button Overlay (for when video is added) */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 pointer-events-none">
-            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
-              <Play className="w-6 h-6 text-primary-foreground ml-1" />
-            </div>
-          </div>
+          </noscript>
         </div>
       </div>
     </section>

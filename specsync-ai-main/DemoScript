@@ -15,6 +15,7 @@ Every code change is scanned. Every spec change is validated. If something drift
 The spec stops being a stale doc. It becomes a living contract.
 SECTION 4 – How It Works (6 steps)
 Here’s the flow: First, PM create new feature in ADO as usual. After review, the spec is checked into the repo as markdown file, linked to the work item, and signed off. Then, Engineers ship the code and open a pull request. The system scans both code and spec. If drift shows up, a doc-update task is created and assigned to the SWE Agent. The agent proposes spec changes. The PM or dev reviews, approves, and merges. Done.
+
 SECTION 5 – Real Demo
 Let’s look at a recent change: the café single namespace implementation and the related TDF spec update. 
 The Café team needed to close a connectivity gap in TDF. Their solution was to implement single-namespace routing, so TDF requests could be routed from a worldwide endpoint.
