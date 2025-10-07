@@ -26,7 +26,9 @@ const Index = () => {
       <section id="how-it-works">
         <HowItWorks />
       </section>
-      <DemoVideo />
+      <section id="demo-video">
+        <DemoVideo />
+      </section>
       <section id="benefits">
         <Benefits />
       </section>

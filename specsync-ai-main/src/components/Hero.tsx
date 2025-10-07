@@ -2,6 +2,16 @@ import { Button } from "@/components/ui/button";
 import { GitBranch, FileText, Zap, ArrowRight, Sparkles, Code, BookOpen } from "lucide-react";
 import heroIllustration from "@/assets/spec-code-connection.png";
 
+const scrollToDemo = () => {
+  const demoSection = document.getElementById('demo-video');
+  if (demoSection) {
+    demoSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+};
+
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-primary/5 pt-16">
@@ -84,10 +94,11 @@ export const Hero = () => {
                 Start Free Today
                 <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button 
-                variant="hero-outline" 
+              <Button
+                variant="hero-outline"
                 size="lg"
                 className="text-lg px-8 py-4 group"
+                onClick={scrollToDemo}
               >
                 Watch Demo
                 <Zap size={20} className="ml-2 group-hover:scale-110 transition-transform" />
